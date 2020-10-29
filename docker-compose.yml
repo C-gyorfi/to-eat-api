@@ -8,3 +8,11 @@ services:
     ports: 
       - 8000:8000
     command: [ "-jar", "DynamoDBLocal.jar", "-sharedDb", "-inMemory" ]
+  application:
+    image: toeat-api
+    build: .
+    ports:
+      - 8080:8080
+    links:
+      - database
+
