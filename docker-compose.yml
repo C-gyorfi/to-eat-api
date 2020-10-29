@@ -6,5 +6,5 @@ services:
     hostname: dynamodb
     container_name: dynamo_db
     ports: 
-      - 27017:27017
+      - 8000:8000
     command: [ "-jar", "DynamoDBLocal.jar", "-sharedDb", "-inMemory" ]
